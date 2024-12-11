@@ -1,0 +1,19 @@
+@WebApplication1_HostAddress = http://localhost:5204
+
+### Ping
+GET {{WebApplication1_HostAddress}}/
+Accept: application/json
+
+### Text Generation
+POST {{WebApplication1_HostAddress}}/generate
+Content-Type: application/json
+{
+  "message": "What's Brazil's capital?"
+}
+
+### Chat
+POST {{WebApplication1_HostAddress}}/chat
+Content-Type: application/json
+{
+  "message": "What's Brazil's capital?"
+}
